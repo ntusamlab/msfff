@@ -6,7 +6,7 @@ Novel Fused Filament Fabrication System for Additive Manufacturing with Minimize
 <br />
 <br />
 ## Project Description
-Reduce support material by discrete platform
+The algorithm can modify the G-code to cooperate with the discrete platform, which includes support-eliminating, path-rearranging, and adding the lifting motions.
 <br />
 <br />
 ## File List and Descriptions
