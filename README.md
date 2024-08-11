@@ -2,11 +2,11 @@
 
 
 ## Project Title
-description
+Novel Fused Filament Fabrication System for Additive Manufacturing with Minimized Support Structures
 <br />
 <br />
 ## Project Description
-What your application does
+Reduce support material by discrete platform
 <br />
 <br />
 ## File List and Descriptions
