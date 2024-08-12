@@ -27,8 +27,11 @@ CAD_files:
 | test_table | database of the experiment |
 <br />
 <br />
+
 ## Steps 
-steps in order to run the code. 
+
+Steps in order to run the code. 
+
 1. please start from downloading or cloning the repository and all the way to run the code with required input data
 2. use Cura to slice the stl. file and save the result into the 'gcode_cura'
 3. run 'test_main.py' to modify the g-code and the result will automatically saved into 'test_output'
