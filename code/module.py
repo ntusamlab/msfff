@@ -71,7 +71,6 @@ def output_excel(filename,parameters,new_value=None):
 
 # function used in 3d print and arduino
 
-# 
 def serWrite(ser,order):
     ser.write((order+'\r\n').encode('ascii'))
     time.sleep(1)
