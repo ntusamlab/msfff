@@ -27,11 +27,17 @@ gap=lx-50
 # file in/output
 
 def get_gcode(filename):
+    """
+    Turn the gco. file into a list
+    """
     with open(filename, 'r') as f_gcode:
         data = f_gcode.read().split("\n")
     return data
 
 def output_gcode(filename,gcode_list):
+    '''
+    save a list as a gco. file
+    '''
     filepath='/'.join(filename.split('/')[:-1])
     if os.path.isdir(filepath) is False:
         os.makedirs(filepath)
@@ -43,6 +49,7 @@ def output_gcode(filename,gcode_list):
             f_gcode.write(ele+"\n")
     return
 
+# edit the excel with new experiment data
 def output_excel(filename,parameters,new_value=None):
     book = openpyxl.load_workbook(filename)
     sheet = book.active
@@ -61,11 +68,14 @@ def output_excel(filename,parameters,new_value=None):
     book.save(filename)
 
 # function used in 3d print and arduino
+
+# 
 def serWrite(ser,order):
     ser.write((order+'\r\n').encode('ascii'))
     time.sleep(1)
 
 # function used in trim process
+
 def nozzle_position_update(noz_end_pos=[0,0,0,0],gcode=None):
     # update nozzle position
     noz_init_pos=copy.deepcopy(noz_end_pos)
@@ -182,6 +192,7 @@ def fix_gcode(gcode_line,fix_para_arr):
     return fixed_gcode
 
 # function varify
+
 def gcode_visualize(filename,targert_layer_num):
     gcode=get_gcode(filename)
 
