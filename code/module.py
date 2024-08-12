@@ -49,8 +49,10 @@ def output_gcode(filename,gcode_list):
             f_gcode.write(ele+"\n")
     return
 
-# edit the excel with new experiment data
 def output_excel(filename,parameters,new_value=None):
+    '''
+    edit the excel with new experiment data
+    '''
     book = openpyxl.load_workbook(filename)
     sheet = book.active
     last_row=len(sheet['A'])
